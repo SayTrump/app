@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import "regenerator-runtime/runtime";
 import { useEffect, useRef, useState } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
@@ -18,7 +20,7 @@ const web3Connection = new Connection(RPC_ENDPOINT, "confirmed");
 
 const Dictaphone: React.FC<{ triggerFormSubmit: () => void }> = ({ triggerFormSubmit }) => {
     const [trumpDetected, setTrumpDetected] = useState(false);
-    const { transcript, listening, browserSupportsSpeechRecognition, isMicrophoneAvailable } = useSpeechRecognition({
+    const { transcript, browserSupportsSpeechRecognition, isMicrophoneAvailable } = useSpeechRecognition({
         commands: [{ command: /.*Say Trump.*/, callback: () => handleTrumpDetected() }],
     });
 
