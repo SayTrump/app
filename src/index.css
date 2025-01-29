@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 450px;
+}
+
+input {
+    height: 40px;
+}
+
+textarea {
+    height: 100px;
+}
